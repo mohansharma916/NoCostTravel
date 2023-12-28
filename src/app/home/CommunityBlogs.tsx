@@ -5,13 +5,13 @@ const communityblogs = () => {
   return (
     <>
       <div>
-        <p className="flex justify-center text-4xl gradient-background leading-[50px]		">
+        <p className="flex justify-center text-4xl font-semibold gradient-background leading-[50px]		">
           Community Blogs
         </p>
       </div>
       <div className="flex flex-wrap p-5 justify-around">
         {BlogData.map((item) => (
-          <div className=" p-3 border-2 bg-white	border-orange-300 w-72 ">
+          <div className=" p-3 border-2 bg-white	border-[#ffe55c] w-72 ">
             <img className="w-64 rounded-xl h-44" src={item.image} alt="" />
             <div style={{ color: "#85a0ad" }} className="mt-1 text-xs">
               <LocationOnOutlinedIcon style={{ color: "yellow" }} />
