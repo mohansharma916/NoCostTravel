@@ -24,8 +24,8 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="relative ">
-        <Slider {...settings} style={{ height: "100%" }}>
+      <div className="relative overflow-hidden ">
+        <Slider {...settings}>
           {HeroData.map((slide) => (
             <div
               key={slide.id}
