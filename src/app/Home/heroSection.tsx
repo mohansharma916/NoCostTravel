@@ -20,6 +20,7 @@ const HeroSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    pauseOnHover: false,
   };
 
   return (
