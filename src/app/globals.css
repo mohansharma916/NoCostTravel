@@ -27,3 +27,12 @@ body {
 *::-webkit-scrollbar {
   display: none;
 }
+.gradient-background {
+  background-color: white;
+  background: linear-gradient(to left, rgb(243 115 53) 0%, rgba(253, 200, 48, 1) 100%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+}
+
