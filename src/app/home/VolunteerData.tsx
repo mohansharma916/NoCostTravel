@@ -12,13 +12,13 @@ const VolunteerData = [
               alt=""
             />
           </div>
-          <div className="container  p-5 mt-5 rounded-xl 	">
+          <div className="container  p-5 mt-5 rounded-xl  ">
             <div className="text-xs">
               <LocationOnOutlinedIcon style={{ color: "yellow" }} />
               <span className="ml-1">Chamba,Himachal Pradesh</span>
             </div>
-            <div className="text-base	mt-2">Hashmi</div>
-            <div className="text-sm mt-3 	">
+            <div className="text-base mt-2">Hashmi</div>
+            <div className="text-sm mt-3  ">
               My experience as a travel volunteer with Volunteer Yatra
             </div>
           </div>
@@ -35,13 +35,13 @@ const VolunteerData = [
               alt=""
             />
           </div>
-          <div className="container  p-5 mt-5 rounded-xl 	">
+          <div className="container  p-5 mt-5 rounded-xl  ">
             <div className="text-xs">
               <LocationOnOutlinedIcon style={{ color: "yellow" }} />
               <span className="ml-1">Chamba,Himachal Pradesh</span>
             </div>
-            <div className="text-base	mt-2">Hashmi</div>
-            <div className="text-sm mt-3	">
+            <div className="text-base mt-2">Hashmi</div>
+            <div className="text-sm mt-3  ">
               My experience as a travel volunteer with Volunteer Yatra
             </div>
           </div>
@@ -58,13 +58,13 @@ const VolunteerData = [
               alt=""
             />
           </div>
-          <div className="container  p-5 mt-5 rounded-xl 	">
+          <div className="container  p-5 mt-5 rounded-xl  ">
             <div className="text-xs">
               <LocationOnOutlinedIcon style={{ color: "yellow" }} />
               <span className="ml-1">Chamba,Himachal Pradesh</span>
             </div>
-            <div className="text-base	mt-2">Hashmi</div>
-            <div className="text-sm mt-3	">
+            <div className="text-base mt-2">Hashmi</div>
+            <div className="text-sm mt-3  ">
               My experience as a travel volunteer with Volunteer Yatra
             </div>
           </div>
