@@ -35,4 +35,13 @@ body {
   -webkit-text-fill-color: transparent;
  
 }
-
+.container {
+  background: rgba(255, 255, 255, 0.27);
+  backdrop-filter: blur(4.3px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.center{
+  display: flex;
+  justify-content: center;
+}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroSection from "./Home/heroSection";
 import VolunteerOpportunities from "./Home/volunteerOpportunities";
 import CommunityBlogs from "./Home/CommunityBlogs";
+import RecentVolunteers from "./Home/RecentVolunteers";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <VolunteerOpportunities />
       <CommunityBlogs />
+      <RecentVolunteers />
     </div>
   );
 }
