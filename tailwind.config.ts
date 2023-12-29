@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       linearGradientColors: {
         "yellow-gradient": ["rgb(255, 229, 92)", "rgb(250, 210, 0)"],
