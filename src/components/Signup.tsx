@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Modal } from "@mui/material";
+import { IconButton, Modal } from "@mui/material";
+import CancelIcon from "@mui/icons-material/Cancel";
 
 const Signup = ({ isOpen, closeModal }: any) => {
   const [formData, setFormData] = useState({
@@ -18,12 +19,12 @@ const Signup = ({ isOpen, closeModal }: any) => {
   return (
     <Modal open={isOpen} onClose={closeModal}>
       {/* <div className="flex items-center justify-center min-h-screen"> */}
-      <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center sm:min-h-screen m-auto w-[90%]  sm:w-full sm:h-[100%] h-[90%] ">
+      <div className="flex items-center justify-center min-h-screen m-auto w-[90%] sm:w-full overflow-y-auto h-[90%]">
         <div
           className="fixed inset-0 bg-gray-500 opacity-75"
           onClick={closeModal}></div>
-        <div className="relative bg-white p-4 sm:p-0 rounded-lg max-w-4xl w-full overflow-y-auto ">
-          <div className="grid grid-cols-1 md:grid-cols-2 ">
+        <div className="relative bg-white rounded-lg max-w-4xl w-full overflow-y-auto ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 ">
             <div className="bg-cover bg-center bg-[url('/images/signup.jpeg')] rounded-ss-lg  rounded-se-lg sm:rounded-se-none sm:rounded-l-lg p-8">
               <div className="text-left text-gray-800">
                 <div className="p-4">
@@ -40,7 +41,13 @@ const Signup = ({ isOpen, closeModal }: any) => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-l from-yellow-200  to-yellow-50   p-8 rounded-b-lg sm:rounded-r-lg">
+            <div className="relative bg-gradient-to-l from-yellow-200  to-yellow-50   p-8 rounded-b-lg sm:rounded-r-lg">
+              <IconButton
+                aria-label="close"
+                onClick={closeModal}
+                className="absolute top-2 right-2 sm:hidden">
+                <CancelIcon />
+              </IconButton>
               <h2 className="text-4xl font-bold text-slate-600 ">
                 Hey,
                 <br /> We are glad to have
