@@ -17,11 +17,12 @@ const Signup = ({ isOpen, closeModal }: any) => {
 
   return (
     <Modal open={isOpen} onClose={closeModal}>
-      <div className="flex items-center justify-center min-h-screen">
+      {/* <div className="flex items-center justify-center min-h-screen"> */}
+      <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center sm:min-h-screen m-auto w-[90%]  sm:w-full sm:h-[100%] h-[90%] ">
         <div
           className="fixed inset-0 bg-gray-500 opacity-75"
           onClick={closeModal}></div>
-        <div className="relative bg-white p-4 sm:p-0 rounded-lg max-w-4xl w-full">
+        <div className="relative bg-white p-4 sm:p-0 rounded-lg max-w-4xl w-full overflow-y-auto ">
           <div className="grid grid-cols-1 md:grid-cols-2 ">
             <div className="bg-cover bg-center bg-[url('/images/signup.jpeg')] rounded-ss-lg  rounded-se-lg sm:rounded-se-none sm:rounded-l-lg p-8">
               <div className="text-left text-gray-800">

@@ -179,8 +179,8 @@ export default function Header() {
             className="text-sm font-semibold leading-6 font-lato  rounded-md px-6 p-2 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]"
             onClick={openModal}>
             Join Now<span aria-hidden="true">&rarr;</span>
-            <Signup isOpen={showModal} closeModal={closeModal} />
           </a>
+          <Signup isOpen={showModal} closeModal={closeModal} />
         </div>
       </nav>
       <Dialog
