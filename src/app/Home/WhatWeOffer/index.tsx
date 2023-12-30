@@ -53,7 +53,7 @@ const WhatWeOffer = () => {
           </div>
         ))}
 
-        <button className="flex items-center text-lg font-semibold mt-8 cursor-pointer leading-6 font-lato  rounded-md shadow-md p-3 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]">
+        <button className="flex items-center sm:text-lg font-semibold mt-8 cursor-pointer leading-6 font-lato  rounded-md shadow-md p-3 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]">
           Find Volunteering Opportunities
           <EastIcon sx={{ marginLeft: 1 }} />
         </button>

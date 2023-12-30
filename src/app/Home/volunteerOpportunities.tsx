@@ -14,7 +14,7 @@ const VolunteerOpportunities = () => {
             Discover 100+ Opportunities across भारत
           </h3>
         </div>
-        <button className="cursor-pointer h-10 w-20 text-white rounded-md shadow-md bg-gradient-to-b from-yellow-300 to-yellow-500">
+        <button className="cursor-pointer h-10 w-24 text-white rounded-md shadow-md bg-gradient-to-b from-yellow-300 to-yellow-500">
           View All
         </button>
       </div>

@@ -162,7 +162,7 @@ export default function Header() {
             About
           </a>
           <Link
-            href="/HowItWorks"
+            href="/travel-for-free"
             className="text-sm font-semibold leading-6 text-gray-900">
             How It Works
           </Link>
@@ -251,7 +251,7 @@ export default function Header() {
                   About
                 </a>
                 <Link
-                  href="/HowItWorks"
+                  href="/travel-for-free"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   How It Works
                 </Link>
