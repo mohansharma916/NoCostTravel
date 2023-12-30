@@ -17,29 +17,32 @@ const volunteerOpportunitiesData = [
     title: "Volunteer In Manali",
     detail:
       "Our property is located within the hearts of mountain. Manali is a high-altitude Himalayan resort town in... ",
-    tags: ["Musician", "Videographer", "+ More"],
+    tags: ["Musician", "Videographer", "Community Engagement", "+ More"],
   },
   {
     location: "Delhi",
     icon: "/images/hero-3.jpeg",
-    title: "Title 1",
-    detail: "Details 1",
-    tags: ["Tag1", "Tag2"],
+    title: "Volunteer In Kinnaur",
+    detail:
+      "Our Riverside Camps and Resorts situated in the heart of the Himalayan mountains offers contemporary... ",
+    tags: ["Content Creator", "Videographer", "Musician", "+ More"],
   },
   {
     location: "Uttar Pradesh",
     need: "Needs Help Urgently",
     icon: "/images/hero-1.jpeg",
-    title: "Title 1",
-    detail: "Details 1",
-    tags: ["Tag1", "Tag2"],
+    title: "Volunteer In Rangareddy",
+    detail:
+      "Chevella is a village located in the outskirts of Hyderabad city (about 44kms from Mehdipatnam). The farm... ",
+    tags: ["Content Creator", "Architect", "+ More"],
   },
   {
-    location: "Delhi",
+    location: "Uttrakhand",
     icon: "/images/hero-3.jpeg",
-    title: "Title 1",
-    detail: "Details 1",
-    tags: ["Tag1", "Tag2"],
+    title: "Volunteer In Almora",
+    detail:
+      "A hilltop & countryside homestay. Amazing sun rises and local Kumaon cuisine ",
+    tags: ["Tour Guide", "Social Media Manager"],
   },
 ];
 
