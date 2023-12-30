@@ -8,7 +8,10 @@ const SimpleSlider = () => {
   const settings = {
     dots: false,
     // lazyLoad: true,
-    infinite: true,
+    // infinite: true,
+    centerMode: true,
+    useCSS: true,
+
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -17,9 +20,9 @@ const SimpleSlider = () => {
   return (
     <div className=" w-[80vw] ">
       {VolunteerData.map((item) => (
-        <div className="  ">
-          <Slider className="center" {...settings}>
-            <div>{item.firstVolunteer}</div>
+        <div className=" w-full ">
+          <Slider className="" {...settings}>
+            <div className="mx-auto ">{item.firstVolunteer}</div>
             <div>{item.secondVolunteer}</div>
             <div>{item.thirdVolunteer}</div>
           </Slider>

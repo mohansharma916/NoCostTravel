@@ -8,7 +8,7 @@ const VolunteerOpportunities = () => {
       {volunteerOpportunitiesData.map((item, index) => (
         <div
           key={index}
-          className="relative w-80 min-w-72 h-96 rounded-lg shadow-lg "
+          className="relative w-80 h-96 rounded-lg shadow-lg"
           style={{
             backgroundImage: `url(${item.icon})`,
             backgroundSize: "cover",
@@ -21,9 +21,9 @@ const VolunteerOpportunities = () => {
               </button>
             </div>
           )}
-          <div className="absolute top-1/2 w-full text-white p-4 text-left">
-            <div className="flex text-[#ffe55c] text-xs">
-              <MapPinIcon className="w-4" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+            <div className="flex text-yellow-600 text-2xl font-bold">
+              <MapPinIcon className="ml-2 w-6" />
               <span>{item.location}</span>
             </div>
             <p className="text-white mt-2">{item.title}</p>

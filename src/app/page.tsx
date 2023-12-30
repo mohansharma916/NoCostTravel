@@ -7,6 +7,9 @@ import RecentVolunteers from "./Home/RecentVolunteers";
 import { TravelAffordable } from "./Home/TravelAffordably";
 import { FAQ } from "./Home/FAQ";
 import FooterComponent from "@/components/Footer";
+
+import { Slide } from "./Home/Slide";
+
 // import { FooterComponent } from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +24,7 @@ export default function Home() {
       <TravelAffordable />
       <FAQ />
       <FooterComponent />
+      {/* <FooterComponent /> */}
     </div>
   );
 }
