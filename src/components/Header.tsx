@@ -15,6 +15,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import Signup from "./Signup";
 
 const products = [
   {
@@ -59,13 +60,21 @@ function classNames(...classes: string[]) {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <header className="bg-white">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8"
-        aria-label="Global"
-      >
+        aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -80,8 +89,7 @@ export default function Header() {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
+            onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
@@ -103,15 +111,13 @@ export default function Header() {
               enterTo="opacity-100 translate-y-0"
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
+              leaveTo="opacity-0 translate-y-1">
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                    >
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <item.icon
                           className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
@@ -121,8 +127,7 @@ export default function Header() {
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
+                          className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
@@ -136,8 +141,7 @@ export default function Header() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
                       <item.icon
                         className="h-5 w-5 flex-none text-gray-400"
                         aria-hidden="true"
@@ -167,15 +171,15 @@ export default function Header() {
           </button> */}
           <a
             href="#"
-            className="text-sm font-semibold border-2 border-[#2f4858] rounded-md min-w-[99px] min-h-[40px] px-6 leading-6 p-2 text-gray-900  "
-          >
+            className="text-sm font-semibold border-2 border-[#2f4858] rounded-md min-w-[99px] min-h-[40px] px-6 leading-6 p-2 text-gray-900  ">
             Log in
           </a>
           <a
             href="#"
-            className="text-sm font-semibold leading-6 font-lato font-semibold  rounded-md px-6 p-2 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]"
-          >
+            className="text-sm font-semibold leading-6 font-lato  rounded-md px-6 p-2 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]"
+            onClick={openModal}>
             Join Now<span aria-hidden="true">&rarr;</span>
+            <Signup isOpen={showModal} closeModal={closeModal} />
           </a>
         </div>
       </nav>
@@ -183,8 +187,7 @@ export default function Header() {
         as="div"
         className="lg:hidden"
         open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
+        onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -199,8 +202,7 @@ export default function Header() {
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+              onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Close menu</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
@@ -227,8 +229,7 @@ export default function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                             {item.name}
                           </Disclosure.Button>
                         ))}
@@ -238,34 +239,29 @@ export default function Header() {
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Blogs
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   About
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   How It Works
                 </a>
               </div>
               <div className="py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Log in
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Join Now
                 </a>
               </div>
