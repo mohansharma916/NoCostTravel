@@ -36,6 +36,20 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.button-gradient-background
+{
+ 
+  background: radial-gradient(at 10% 10%, rgb(255, 229, 92) 0%, rgb(234, 207, 68) 100%);
+  background-size: cover;
+  
+}
+.card-gradient-background
+{
+ 
+  background: -webkit-linear-gradient(top, rgb(91, 118, 136) 0%, rgb(47, 72, 88) 100%);
+  background-size: cover;
+  
+}
 .container {
   background: rgba(255, 255, 255, 0.27);
   backdrop-filter: blur(4.3px);

@@ -1,5 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import { grey } from "@mui/material/colors";
 
 const FaqsCard = (props: { faqsList: any; idx: any }) => {
   const answerElRef = useRef();
@@ -87,21 +89,38 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
-      <div className="space-y-3 text-center">
-        <h1 className="text-3xl text-gray-800 font-semibold">
-          Frequently Asked Questions
-        </h1>
-        <p className="text-gray-600 max-w-lg mx-auto text-lg">
-          Answered all frequently asked questions, Still confused? feel free to
-          contact us.
-        </p>
+    <>
+      <div className="leading-relaxed  mt-12 sm:mx-auto sm:px-4 md:px-8 ">
+        <div className="space-y-3 text-center mt-16 px-5">
+          <h1 className="text-3xl text-gray-800 font-semibold">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-gray-600 max-w-lg mx-auto text-lg">
+            Answered all frequently asked questions, Still confused? feel free
+            to contact us.
+          </p>
+        </div>
+
+        <div className="sm:flex sm:p-14 px-5 mt-10   sm:justify-between ">
+          <div className=" max-w-2xl mx-auto sm:w-2/5">
+            {faqsList.map((item, idx) => (
+              <FaqsCard idx={idx} faqsList={item} />
+            ))}
+          </div>
+          <div className="  sm:w-2/5	border-[#cfcfcf] border-2	 bg-white rounded-2xl flex-col flex items-center mt-5 sm:mt-0 py-3 sm:py-10 mb-5 sm:mb-0 ">
+            <ChatBubbleIcon className="text-[#2f4858] h-16 w-16 " />
+            <p className="text-[#2f4858] font-bold	sm:text-2xl text-xl sm:mt-5  	">
+              Do you have more questions?
+            </p>
+            <p className="text-[#2f4858] font-semibold sm:mt-5 mt-3 text-center leading-tight">
+              We would be happy to help you with whatever questions you have
+            </p>
+            <button className="button-gradient-background text-white h-12 w-[64%] font-bold rounded-md bg-yellow-300 sm:mt-10 mt-3">
+              Ask Us Anything
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="mt-14 max-w-2xl mx-auto">
-        {faqsList.map((item, idx) => (
-          <FaqsCard idx={idx} faqsList={item} />
-        ))}
-      </div>
-    </section>
+    </>
   );
 };
