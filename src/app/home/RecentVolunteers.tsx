@@ -32,6 +32,9 @@ const blogs = [
 ];
 
 const RecentVolunteers = () => {
+  const sliderRef = useRef(null);
+  const [slider, setSlider] = useState(null);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -40,13 +43,21 @@ const RecentVolunteers = () => {
     slidesToScroll: 1,
   };
 
+  const nextSlide = () => {
+    slider.slickNext();
+  };
+
+  const prevSlide = () => {
+    slider.slickPrev();
+  };
+
   return (
     <div className="relative w-full bg-[url('/images/blog/volunteerbg.png')] bg-cover bg-center p-4">
       <h1 className="text-center text-white text-4xl font-bold">
         Recent Volunteers
       </h1>
       <div className=" mx-auto p-4 ">
-        <Slider {...settings}>
+        <Slider {...settings} ref={(c) => setSlider(c)}>
           {blogs.map((blog, index) => (
             <div key={index}>
               <div className="flex flex-col items-center justify-center mx-auto">
@@ -81,6 +92,18 @@ const RecentVolunteers = () => {
             </div>
           ))}
         </Slider>
+        {/* <div className="flex justify-center mt-4">
+          <button
+            onClick={prevSlide}
+            className="px-4 py-2 text-white rounded-3xl sm:hover:font-semibold mr-2 ">
+            Prev
+          </button>
+          <button
+            onClick={nextSlide}
+            className="px-4 py-2 text-white rounded-3xl sm:hover:font-semibold ">
+            Next
+          </button>
+        </div> */}
       </div>
     </div>
   );
