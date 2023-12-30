@@ -12,7 +12,7 @@ const BlogData = [
     image: "/images/blog/img2.png",
     location: "Kinnaur, Himachal Pradesh",
     heading: "Sharing my Space with Nature",
-    description: "My fulfilling Experience of being a Yatri ",
+    description: "My fulfilling Experience of being a Yatri... ",
     writtenBy: "Written by Kartikey",
   },
   {

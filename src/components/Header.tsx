@@ -15,6 +15,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const products = [
   {
@@ -156,9 +157,12 @@ export default function Header() {
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             About
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="/HowItWorks"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             How It Works
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1  lg:gap-5 lg:justify-end">
           {/* <button className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -248,12 +252,12 @@ export default function Header() {
                 >
                   About
                 </a>
-                <a
-                  href="#"
+                <Link
+                  href="/HowItWorks"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   How It Works
-                </a>
+                </Link>
               </div>
               <div className="py-6">
                 <a

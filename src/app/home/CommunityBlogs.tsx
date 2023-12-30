@@ -9,23 +9,37 @@ const communityblogs = () => {
           Community Blogs
         </p>
       </div>
-      <div className="flex  p-5 justify-around">
+      <div className="flex flex-wrap  sm:p-5 p-1 justify-around">
         {BlogData.map((item) => (
-          <div className=" p-3 border-2 bg-white  border-[#FFE55C] w-64  ">
-            <img className="w-64 rounded-xl h-44" src={item.image} alt="" />
-            <div style={{ color: "#85A0AD" }} className="mt-1 text-xs">
+          <div className=" sm:p-3 p-1 border-2 bg-white  border-[#FFE55C] sm:w-64 w-44 mt-3 sm:mt-0  ">
+            <img
+              className="sm:w-64 w-44	 rounded-xl sm:h-44 h-24"
+              src={item.image}
+              alt=""
+            />
+            <div
+              style={{ color: "#85A0AD" }}
+              className="mt-1 sm:text-xs text-[10px]"
+            >
               <LocationOnOutlinedIcon style={{ color: "yellow" }} />
               {item.location}
             </div>
-            <div className="mt-1" style={{ color: "#2F4858" }}>
+            <div
+              className="mt-1 text-[10px] sm:text-base font-semibold"
+              style={{ color: "#2F4858" }}
+            >
               {item.heading}
             </div>
-            <div className="mt-1 text-sm" style={{ color: "#85A0AD" }}>
+            <div
+              className="mt-1 sm:text-sm text-xs h-14"
+              style={{ color: "#85A0AD" }}
+            >
               {item.description}
             </div>
             <div
               className="mt-1 text-xs flex items-end "
-              style={{ color: "#2F4858" }}>
+              style={{ color: "#2F4858" }}
+            >
               {item.writtenBy}
             </div>
           </div>

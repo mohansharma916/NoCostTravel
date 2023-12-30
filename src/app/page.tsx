@@ -5,6 +5,7 @@ import VolunteerOpportunities from "./Home/volunteerOpportunities";
 import CommunityBlogs from "./Home/CommunityBlogs";
 import RecentVolunteers from "./Home/RecentVolunteers";
 import { TravelAffordable } from "./Home/TravelAffordably";
+import BecomeMember from "./home/become-a-member";
 import { FAQ } from "./Home/FAQ";
 import FooterComponent from "@/components/Footer";
 
@@ -22,7 +23,9 @@ export default function Home() {
       <RecentVolunteers />
       {/* <Header /> */}
       <TravelAffordable />
+      <BecomeMember />
       <FAQ />
+
       <FooterComponent />
       {/* <FooterComponent /> */}
     </div>
