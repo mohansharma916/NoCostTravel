@@ -5,6 +5,9 @@ import VolunteerOpportunities from "./Home/volunteerOpportunities";
 import CommunityBlogs from "./home/CommunityBlogs";
 import RecentVolunteers from "./home/RecentVolunteers";
 import { Slide } from "./home/Slide";
+import { TravelAffordable } from "./Home/TravelAffordably";
+import { FAQ } from "./Home/FAQ";
+// import { FooterComponent } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +17,10 @@ export default function Home() {
       <VolunteerOpportunities />
       <CommunityBlogs />
       <RecentVolunteers />
+      {/* <Header /> */}
+      <TravelAffordable />
+      <FAQ />
+      {/* <FooterComponent /> */}
     </div>
   );
 }
