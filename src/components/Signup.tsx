@@ -19,7 +19,7 @@ const Signup = ({ isOpen, closeModal }: any) => {
   return (
     <Modal open={isOpen} onClose={closeModal}>
       {/* <div className="flex items-center justify-center min-h-screen"> */}
-      <div className="flex items-center justify-center min-h-screen m-auto w-[90%] sm:w-full overflow-y-auto h-[90%]">
+      <div className="flex items-center justify-center min-h-screen m-auto w-[90%] sm:w-full overflow-y-auto h-[100%]">
         <div
           className="fixed inset-0 bg-gray-500 opacity-75"
           onClick={closeModal}></div>
