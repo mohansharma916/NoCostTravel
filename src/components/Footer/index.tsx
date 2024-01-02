@@ -117,7 +117,7 @@ const FooterComponent = () => {
                   className="w-full pl-12 pr-3 py-2 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
               </div>
-              <button className="block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow">
+              <button className="block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200] hover:bg-gradient-to-t  active:bg-yellow-300 active:shadow-none rounded-lg shadow">
                 Subscribe
               </button>
             </form>
