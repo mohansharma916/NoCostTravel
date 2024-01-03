@@ -73,19 +73,21 @@ const Membership = ({ isOpen, closeModal }: any) => {
 
   return (
     <Modal open={isOpen} onClose={closeModal}>
-      <div className="flex items-center justify-center min-h-screen m-auto w-[90%] sm:w-full overflow-y-auto max-h-[98%] h-auto sm:h-full">
+      <div className="flex items-center justify-center min-h-screen m-auto w-[90%] sm:w-full overflow-y-auto h-[96%] ">
         <div
           className="fixed inset-0 bg-gray-500 opacity-75"
           onClick={closeModal}></div>
-        <div className="relative bg-white rounded-lg max-w-screen-xl overflow-y-auto h-[98%] sm:h-auto p-4">
+        <div className="relative bg-white rounded-lg max-w-screen-lg overflow-y-auto h-[96%]  p-4">
           <IconButton
             aria-label="close"
             onClick={closeModal}
-            className="absolute top-2 right-2 sm:hidden">
-            <CancelIcon />
+            className="absolute top-0 sm:top-4 right-0 sm:right-2 ">
+            <CancelIcon sx={{ color: "grey" }} />
           </IconButton>
-          <div className="text-center">
-            <h1 className="text-4xl text-slate-700">Choose your Impact</h1>
+          <div className="text-center my-3">
+            <h1 className="text-3xl text-slate-700 font-semibold">
+              Choose your Impact
+            </h1>
             <h3 className="text-xl text-slate-600">
               Transform your passion into action
             </h3>
@@ -95,7 +97,7 @@ const Membership = ({ isOpen, closeModal }: any) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {MembershipData.map((item) => (
-              <div className="relative bg-gradient-to-l from-yellow-200  to-yellow-50   p-8 rounded-lg">
+              <div className="relative bg-gradient-to-l from-yellow-200  to-yellow-50  p-4 sm:p-8 rounded-lg overflow-hidden">
                 <h2 className="text-xl sm:text-3xl font-semibold text-slate-600 ">
                   {item.title}
                 </h2>
@@ -126,7 +128,7 @@ const Membership = ({ isOpen, closeModal }: any) => {
                   ))}
                 </div>
                 {item.category === "pro" && (
-                  <form className="space-y-4">
+                  <form className="sm:space-y-4">
                     <div className="flex gap-3">
                       <input
                         name="cuponCode"
