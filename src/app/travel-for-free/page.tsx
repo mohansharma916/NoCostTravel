@@ -23,7 +23,7 @@ export default function HowItWorks() {
   return (
     <>
       <div>
-        <Header />
+        {/* <Header /> */}
         <div className="bg-[#ffe77f] p-8 sm:flex  sm:justify-center sm:px-72">
           <div className="sm:px-5">
             <YouTube
