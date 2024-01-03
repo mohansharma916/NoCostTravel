@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import HeroSection from "./Home/heroSection";
-import VolunteerOpportunities from "./Home/volunteerOpportunities";
+import VolunteerOpportunities from "./Home/VolunteerOpportunities/volunteerOpportunities";
 import CommunityBlogs from "./Home/CommunityBlogs";
 import RecentVolunteers from "./Home/RecentVolunteers";
 import { TravelAffordable } from "./Home/TravelAffordably";
@@ -16,7 +16,7 @@ import { Slide } from "./Home/Slide";
 export default function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
       <VolunteerOpportunities />
       <WhatWeOffer />
@@ -27,7 +27,7 @@ export default function Home() {
       <BecomeMember />
       <FAQ />
 
-      <FooterComponent />
+      {/* <FooterComponent /> */}
       {/* <FooterComponent /> */}
     </div>
   );
