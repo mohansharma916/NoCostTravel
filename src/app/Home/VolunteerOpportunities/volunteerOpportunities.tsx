@@ -27,7 +27,8 @@ const VolunteerOpportunities = () => {
               backgroundImage: `url(${item.icon})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-            }}>
+            }}
+          >
             {item.need && (
               <div className="absolute top-0 left-0 p-2">
                 <button className="flex items-center p-1 bg-white text-xs rounded-md border ">
@@ -48,7 +49,8 @@ const VolunteerOpportunities = () => {
                 {item.tags.map((tag, idx) => (
                   <div
                     key={idx}
-                    className="w-full text-white text-xs  px-2 py-1 m-1 bg-opacity-50 bg-slate-300 backdrop-blur-sm backdrop-filter rounded-md border">
+                    className="w-full text-white text-xs  px-2 py-1 m-1 bg-opacity-50 bg-slate-300 backdrop-blur-sm backdrop-filter rounded-md border"
+                  >
                     {tag}
                   </div>
                 ))}
