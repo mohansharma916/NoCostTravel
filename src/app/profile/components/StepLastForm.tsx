@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 
-const StepOneForm = ({ handleSubmit }) => {
+const StepOneForm = ({ formData }: any) => {
   const [fullName, setFullName] = useState("");
   const [birthdate, setBirthdate] = useState("");
   const [gender, setGender] = useState("");
@@ -11,22 +11,7 @@ const StepOneForm = ({ handleSubmit }) => {
   const [bio, setBio] = useState("");
   const [profileImage, setProfileImage] = useState(null);
 
-  const handleUploadImage = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      setProfileImage(reader.result);
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleGenderChange = (e) => {
-    setGender(e.target.value);
-  };
+  console.log("formData", formData);
 
   return (
     <div className="w-full mx-auto p-6 bg-slate-300 shadow-lg rounded-lg">
@@ -105,8 +90,7 @@ const StepOneForm = ({ handleSubmit }) => {
               <select
                 id="gender"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
-                value={gender}
-                onChange={handleGenderChange}>
+                value={gender}>
                 <option value="">Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -138,7 +122,6 @@ const StepOneForm = ({ handleSubmit }) => {
             </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="text-center"></form>
       </div>
     </div>
   );

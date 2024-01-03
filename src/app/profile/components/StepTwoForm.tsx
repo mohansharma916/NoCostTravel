@@ -23,7 +23,6 @@ const StepTwoForm = ({
     nextStep(formData);
   };
 
-  console.log("formData", formData);
   return (
     <form onSubmit={handleSubmit}>
       <div className="w-full mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -34,6 +33,7 @@ const StepTwoForm = ({
                 Who are you?
               </label>
               <select
+                name="whoAreYou"
                 id="whoAreYou"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
                 value={formData.whoAreYou}
@@ -53,6 +53,7 @@ const StepTwoForm = ({
                 Name of your organization
               </label>
               <input
+                name="organizationName"
                 type="text"
                 placeholder="Enter Organization"
                 id="organizationName"

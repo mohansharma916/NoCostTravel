@@ -3,7 +3,7 @@ import React from "react";
 const ProgressBar = ({ step }: any) => {
   const totalSteps = 4;
 
-  const progressPercentage = ((step - 1) / totalSteps) * 100;
+  const progressPercentage = (step / totalSteps) * 100;
   const displayPercentage = Math.round(progressPercentage);
 
   return (

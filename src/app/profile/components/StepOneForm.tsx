@@ -40,14 +40,11 @@ const StepOneForm = ({
       reader.readAsDataURL(file);
     }
   };
-  useEffect(() => {
-    console.log("Form Data:", formData);
-  }, [formData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("fghhjk", formData);
-    // nextStep(formData);
+    nextStep(formData);
   };
 
   return (
@@ -85,6 +82,7 @@ const StepOneForm = ({
               </div>
             </label>
             <input
+              name="profileImage"
               type="file"
               id="profileImage"
               className="hidden"
@@ -97,6 +95,7 @@ const StepOneForm = ({
                 Full Name
               </label>
               <input
+                name="fullName"
                 type="text"
                 id="fullName"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
@@ -109,6 +108,7 @@ const StepOneForm = ({
                 Date of Birth
               </label>
               <input
+                name="birthdate"
                 type="date"
                 id="birthdate"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
@@ -121,6 +121,7 @@ const StepOneForm = ({
                 Email
               </label>
               <input
+                name="email"
                 type="email"
                 id="email"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
@@ -133,6 +134,7 @@ const StepOneForm = ({
                 Phone Number
               </label>
               <input
+                name="phoneNumber"
                 type="tel"
                 id="phoneNumber"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
@@ -145,6 +147,7 @@ const StepOneForm = ({
                 Gender
               </label>
               <select
+                name="gender"
                 id="gender"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
                 value={formData.gender}
@@ -160,6 +163,7 @@ const StepOneForm = ({
                 Country
               </label>
               <input
+                name="country"
                 type="text"
                 id="country"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
@@ -172,6 +176,7 @@ const StepOneForm = ({
                 Bio
               </label>
               <textarea
+                name="bio"
                 id="bio"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
                 rows="4"
