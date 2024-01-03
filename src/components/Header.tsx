@@ -17,6 +17,7 @@ import {
 } from "@heroicons/react/20/solid";
 import Signup from "./Signup";
 import Link from "next/link";
+import Login from "./Login";
 
 const products = [
   {
@@ -62,6 +63,7 @@ function classNames(...classes: string[]) {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [loginModal, setLoginModal] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -69,6 +71,14 @@ export default function Header() {
 
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  const openLoginModal = () => {
+    setLoginModal(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModal(false);
   };
 
   return (
@@ -174,9 +184,11 @@ export default function Header() {
           </button> */}
           <a
             href="#"
-            className="text-sm font-semibold border-2 border-[#2f4858] rounded-md min-w-[99px] min-h-[40px] px-6 leading-6 p-2 text-gray-900  ">
+            className="text-sm font-semibold border-2 border-[#2f4858] rounded-md min-w-[99px] min-h-[40px] px-6 leading-6 p-2 text-gray-900  "
+            onClick={openLoginModal}>
             Log in
           </a>
+          <Login isOpen={loginModal} closeLoginModal={closeLoginModal} />
           <a
             href="#"
             className="text-sm font-semibold leading-6 font-lato  rounded-md px-6 p-2 text-white bg-gradient-to-b from-[#ffe55c] to-[#FAD200]"
