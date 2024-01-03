@@ -1,6 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import Membership from "@/components/Membership";
 
 const MememberCard = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <div className=" sm:flex  justify-between	mt-10 sm:py-5 sm:px-32 px-3">
@@ -22,9 +34,12 @@ const MememberCard = () => {
             Open your home, open your heart: Become a host and empower change
             through volunteer travel
           </p>
-          <button className="sm:mt-10 mt-3 bg-[#FFE55C] w-40	h-11	text-[#2F4858] font-medium rounded-md	">
+          <button
+            className="sm:mt-10 mt-3 bg-[#FFE55C] w-40	h-11	text-[#2F4858] font-medium rounded-md	"
+            onClick={openModal}>
             Get Started
           </button>
+          <Membership isOpen={showModal} closeModal={closeModal} />
         </div>
       </div>
     </div>
