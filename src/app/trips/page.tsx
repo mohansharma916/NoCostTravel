@@ -6,7 +6,7 @@ import Link from "next/link";
 const Opportunities = () => {
   return (
     <>
-      <div className="w-full p-4 flex justify-between sm:items-center">
+      <div className="w-full px-8 py-4 flex justify-between sm:items-center">
         <div>
           <h1 className="text-2xl font-bold text-slate-800">
             Travel as a Volunteer
@@ -19,9 +19,9 @@ const Opportunities = () => {
           View All
         </button>
       </div>
-      <div className="  gap-4 p-4 flex flex-wrap mt-5">
+      <div className="  gap-4 px-8 py-4 flex flex-wrap mt-5 justify-between">
         {volunteerOpportunitiesData.map((item, index) => (
-          <Link href={`/opportunities/${item.id}`}>
+          <Link href={`/trips/${item.id}`}>
             <div
               key={index}
               className="relative min-w-72 w-80 h-96 rounded-lg shadow-lg overflow-hidden"
@@ -29,8 +29,7 @@ const Opportunities = () => {
                 backgroundImage: `url(${item.icon})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-              }}
-            >
+              }}>
               {item.need && (
                 <div className="absolute top-0 left-0 p-2">
                   <button className="flex items-center p-1 bg-white text-xs rounded-md border ">
@@ -52,8 +51,7 @@ const Opportunities = () => {
                   {item.tags.map((tag, idx) => (
                     <div
                       key={idx}
-                      className="w-full text-white text-xs  px-2 py-1 m-1 bg-opacity-50 bg-slate-300 backdrop-blur-sm backdrop-filter rounded-md border"
-                    >
+                      className="w-full text-white text-xs  px-2 py-1 m-1 bg-opacity-50 bg-slate-300 backdrop-blur-sm backdrop-filter rounded-md border">
                       {tag}
                     </div>
                   ))}
