@@ -1,34 +1,23 @@
-import Header from "@/components/Header";
-import Image from "next/image";
-import HeroSection from "./Home/heroSection";
-import VolunteerOpportunities from "./Home/VolunteerOpportunities/volunteerOpportunities";
-import CommunityBlogs from "./Home/CommunityBlogs";
-import RecentVolunteers from "./Home/RecentVolunteers";
-import { TravelAffordable } from "./Home/TravelAffordably";
-import BecomeMember from "./home/become-a-member";
-import { FAQ } from "./Home/FAQ";
-import FooterComponent from "@/components/Footer";
-import WhatWeOffer from "./Home/WhatWeOffer";
-import { Slide } from "./Home/Slide";
-
-// import { FooterComponent } from "@/components/Footer";
+import HeroSection from "./home/HeroSection";
+import VolunteerOpportunities from "./home/VolunteerOpportunities/volunteerOpportunities";
+import CommunityBlogs from "./home/CommunityBlogs";
+import RecentVolunteers from "./home/RecentVolunteers";
+import { TravelAffordable } from "./home/TravelAffordably";
+import BecomeMember from "./home/BecomeMember";
+import { FAQ } from "./home/FAQ";
+import WhatWeOffer from "./home/WhatWeOffer";
 
 export default function Home() {
   return (
     <div>
-      {/* <Header /> */}
       <HeroSection />
       <VolunteerOpportunities />
       <WhatWeOffer />
       <CommunityBlogs />
       <RecentVolunteers />
-      {/* <Header /> */}
       <TravelAffordable />
       <BecomeMember />
       <FAQ />
-
-      {/* <FooterComponent /> */}
-      {/* <FooterComponent /> */}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import BlogData from "./BlogData";
+import BlogData from "../../blog/blogData";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Link from "next/link";
 const communityblogs = () => {

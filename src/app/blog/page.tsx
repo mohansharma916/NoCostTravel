@@ -1,19 +1,10 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HeroData from "@/app/Home/herodata";
-import LocationData from "@/app/Home/loaction";
-import BlogData from "@/app/Home/BlogData";
-
+import BlogData from "@/app/blog/blogData";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-
-import {
-  MagnifyingGlassIcon,
-  MapPinIcon,
-  ArrowTopRightOnSquareIcon,
-} from "@heroicons/react/24/outline";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -70,15 +61,13 @@ const HeroSection = () => {
                 />
                 <div
                   style={{ color: "#85A0AD" }}
-                  className="mt-2 sm:text-xs text-lg"
-                >
+                  className="mt-2 sm:text-xs text-lg">
                   <LocationOnOutlinedIcon style={{ color: "yellow" }} />
                   {item.location}
                 </div>
                 <div
                   className="sm:mt-1 mt-3 text-base font-semibold"
-                  style={{ color: "#2F4858" }}
-                >
+                  style={{ color: "#2F4858" }}>
                   {item.heading}
                 </div>
                 <div className="text-sm  h-14" style={{ color: "#85A0AD" }}>
@@ -86,8 +75,7 @@ const HeroSection = () => {
                 </div>
                 <div
                   className="mt-1 text-xs flex items-end "
-                  style={{ color: "#2F4858" }}
-                >
+                  style={{ color: "#2F4858" }}>
                   {item.writtenBy}
                 </div>
               </div>
@@ -111,15 +99,13 @@ const HeroSection = () => {
                 />
                 <div
                   style={{ color: "#85A0AD" }}
-                  className="mt-2 sm:text-xs text-lg"
-                >
+                  className="mt-2 sm:text-xs text-lg">
                   <LocationOnOutlinedIcon style={{ color: "yellow" }} />
                   {item.location}
                 </div>
                 <div
                   className="sm:mt-1 mt-3 text-base font-semibold"
-                  style={{ color: "#2F4858" }}
-                >
+                  style={{ color: "#2F4858" }}>
                   {item.heading}
                 </div>
                 <div className="text-sm  h-14" style={{ color: "#85A0AD" }}>
@@ -127,8 +113,7 @@ const HeroSection = () => {
                 </div>
                 <div
                   className="mt-1 text-xs flex items-end "
-                  style={{ color: "#2F4858" }}
-                >
+                  style={{ color: "#2F4858" }}>
                   {item.writtenBy}
                 </div>
               </div>

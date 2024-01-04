@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import BlogData from "@/app/Home/BlogData";
+import BlogData from "@/app/blog/blogData";
 import { useParams } from "next/navigation";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";

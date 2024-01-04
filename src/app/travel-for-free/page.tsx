@@ -5,7 +5,7 @@ import Image from "next/image";
 import YouTube, { YouTubeProps } from "react-youtube";
 import VolunteerJourney from "./components/VolunteerJourney";
 import FirstStep from "./components/Steps/FirstStep";
-import { FAQ } from "../Home/FAQ";
+import { FAQ } from "../home/FAQ";
 
 export default function HowItWorks() {
   const opts = {
