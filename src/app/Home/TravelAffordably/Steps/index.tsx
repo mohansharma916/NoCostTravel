@@ -42,21 +42,20 @@ export const Steps = () => {
         {TravelAffordableData.map((data) => (
           <div
             key={data.stepNumber}
-            className="flex items-center justify-between gap-3 ml-4 pb-2"
-          >
+            className="flex items-center justify-between gap-3 ml-4 pb-2">
             <div className="bg-[#ffe557] h-8 w-12 rounded-lg flex items-center justify-center">
               <div>{data.stepNumber}</div>
             </div>
             <div>
               <div className="h-64 w-64 mb-8">
-                <Image
+                <img
                   alt="Travel Affordably"
                   height={260}
                   width={260}
                   src={data.imageIcon}
-                ></Image>
+                />
               </div>
-              <div className="w-4/5">
+              <div className="w-full min-h-40">
                 <h6 className="text-lg mt-4 font-semibold mb-4 text-[#ffff]">
                   {data.heading}
                 </h6>

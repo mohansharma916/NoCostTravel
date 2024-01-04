@@ -37,50 +37,42 @@ const FooterComponent = () => {
           href: "javascript:void()",
           name: "Privacy",
         },
-        {
-          href: "javascript:void()",
-          name: "About US",
-        },
       ],
     },
     {
       label: "Explore",
       items: [
         {
-          href: "javascript:void()",
-          name: "Showcase",
+          href: "/trips",
+          name: "Domestic Trips",
         },
         {
-          href: "javascript:void()",
-          name: "Roadmap",
-        },
-        {
-          href: "javascript:void()",
-          name: "Languages",
-        },
-        {
-          href: "javascript:void()",
+          href: "/blog",
           name: "Blog",
         },
-      ],
-    },
-    {
-      label: "Company",
-      items: [
         {
-          href: "javascript:void()",
-          name: "Partners",
-        },
-        {
-          href: "javascript:void()",
-          name: "Team",
-        },
-        {
-          href: "javascript:void()",
-          name: "Careers",
+          href: "/travel-for-free",
+          name: "How It Works",
         },
       ],
     },
+    // {
+    //   label: "Company",
+    //   items: [
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Partners",
+    //     },
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Team",
+    //     },
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Careers",
+    //     },
+    //   ],
+    // },
   ];
 
   return (
@@ -126,7 +118,7 @@ const FooterComponent = () => {
         <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
           {footerNavs.map((item, idx) => (
             <ul className="space-y-4 text-gray-300" key={idx}>
-              <h4 className="text-gray-200 font-semibold sm:pb-2">
+              <h4 className="text-gray-200 font-semibold sm:pb-1">
                 {item.label}
               </h4>
               {item.items.map((el, idx) => (
@@ -143,7 +135,7 @@ const FooterComponent = () => {
         </div>
         <div className="mt-10 py-10 border-t border-gray-700 items-center justify-between sm:flex">
           <p className="text-gray-300">
-            © 2024 Float UI Inc. All rights reserved.
+            © 2024 Travel For Free. All rights reserved.
           </p>
           <div className="flex items-center gap-x-6 text-gray-400 mt-6">
             <a href="javascript:void()">

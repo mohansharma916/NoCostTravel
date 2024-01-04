@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const blogs = [
   {
@@ -41,6 +43,7 @@ const RecentVolunteers = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
 
   const nextSlide = () => {
@@ -70,7 +73,7 @@ const RecentVolunteers = () => {
                   />
                 </div>
 
-                <div className="bg-slate-300 text-white bg-opacity-40 backdrop-blur-sm  rounded-lg p-2 w-full sm:w-80 border-[0.5px] border-slate-400">
+                <div className="bg-slate-300 text-white bg-opacity-30 backdrop-blur  rounded-lg p-2 w-full sm:w-80 border-[0.5px] border-slate-500">
                   <div className="flex items-center">
                     <MapPinIcon className=" w-6" />
                     <p className="ml-2 text-sm">{blog.location}</p>
@@ -92,18 +95,28 @@ const RecentVolunteers = () => {
             </div>
           ))}
         </Slider>
-        {/* <div className="flex justify-center mt-4">
-          <button
-            onClick={prevSlide}
-            className="px-4 py-2 text-white rounded-3xl sm:hover:font-semibold mr-2 ">
-            Prev
+        <div className="flex justify-center mt-2">
+          <button onClick={prevSlide} className="px-4 py-2 mr-2 ">
+            <KeyboardArrowLeftIcon
+              sx={{
+                fontSize: 40,
+                color: "white",
+                background: "grey",
+                borderRadius: "100%",
+              }}
+            />
           </button>
-          <button
-            onClick={nextSlide}
-            className="px-4 py-2 text-white rounded-3xl sm:hover:font-semibold ">
-            Next
+          <button onClick={nextSlide} className="px-4 py-2  ">
+            <KeyboardArrowRightIcon
+              sx={{
+                fontSize: 40,
+                color: "white",
+                background: "grey",
+                borderRadius: "100%",
+              }}
+            />
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

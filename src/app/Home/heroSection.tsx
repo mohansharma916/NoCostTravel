@@ -10,6 +10,7 @@ import {
   MapPinIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const HeroSection = () => {
   const settings = {
@@ -34,7 +35,7 @@ const HeroSection = () => {
               <img
                 src={slide.imageUrl}
                 alt={`Slide ${slide.id}`}
-                className="w-full h-full  max-h-[75vh] bg-contain bg-center"
+                className="w-full h-full object-cover	bg-center"
               />
               <div className="absolute h-[50%] sm:h-[40%] w-full flex flex-col justify-between top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
                 <div>
@@ -46,10 +47,12 @@ const HeroSection = () => {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row mx-auto">
-                  <button className="flex items-center px-4 py-2 mb-6 sm:mb-0 sm:mr-4  bg-opacity-50 bg-white backdrop-blur-sm backdrop-filter rounded-md border ">
-                    <span>Explore Opportunities</span>
-                    <MapPinIcon className="ml-2 w-6" />
-                  </button>
+                  <Link href="/trips">
+                    <button className="flex items-center px-4 py-2 mb-6 sm:mb-0 sm:mr-4  bg-opacity-50 bg-white backdrop-blur-sm backdrop-filter rounded-md border ">
+                      <span>Explore Domestic Trips</span>
+                      <MapPinIcon className="ml-2 w-6" />
+                    </button>
+                  </Link>
                   <button className="flex items-center justify-between  px-4 py-2 bg-opacity-50 bg-white backdrop-blur-sm backdrop-filter rounded-md border ">
                     <span>Join Our Community</span>
                     <ArrowTopRightOnSquareIcon className="ml-2 w-6" />
@@ -61,7 +64,7 @@ const HeroSection = () => {
         </Slider>
       </div>
 
-      <div className="relative z-20 h-14 mt-[-35px] w-[80%] sm:w-[45%] mx-auto flex items-center justify-center rounded-md shadow-md">
+      <div className="relative h-14 mt-[-35px] w-[80%] sm:w-[45%] mx-auto flex items-center justify-center rounded-md shadow-md">
         <input
           type="text"
           placeholder="Search..."

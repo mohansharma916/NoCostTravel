@@ -15,7 +15,7 @@ const HeroData = [
   },
   {
     id: 3,
-    imageUrl: "/images/hero-3.jpeg",
+    imageUrl: "/images/hero-4.jpeg",
     heading: "Leisure Impact",
     subheading: "Learn Inspire Grow",
   },

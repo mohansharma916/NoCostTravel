@@ -19,8 +19,7 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
     <div
       className="space-y-3 mt-5 overflow-hidden border-b"
       key={idx}
-      onClick={handleOpenAnswer}
-    >
+      onClick={handleOpenAnswer}>
       <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
         {faqsList.q}
         {state ? (
@@ -29,8 +28,7 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
             className="h-5 w-5 text-gray-500 ml-2"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+            stroke="currentColor">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -44,8 +42,7 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
             className="h-5 w-5 text-gray-500 ml-2"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+            stroke="currentColor">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -58,8 +55,7 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
       <div
         ref={answerElRef}
         className="duration-300"
-        style={state ? { height: answerH } : { height: "0px" }}
-      >
+        style={state ? { height: answerH } : { height: "0px" }}>
         <div>
           <p className="text-gray-500">{faqsList.a}</p>
         </div>
@@ -71,7 +67,7 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
 export const FAQ = () => {
   const faqsList = [
     {
-      q: "What’s the validity of membership??",
+      q: "What’s the validity of membership?",
       a: "Depending upon the membership plan you choose.Annual Membership: 12 Months, apply to multiple opportunities & travel all year.",
     },
     {
@@ -92,22 +88,22 @@ export const FAQ = () => {
     <>
       <div className="leading-relaxed  mt-12 sm:mx-auto sm:px-4 md:px-8 ">
         <div className="space-y-3 text-center mt-16 px-5">
-          <h1 className="text-3xl text-gray-800 font-semibold">
+          <h1 className="text-2xl sm:text-3xl text-gray-800 font-semibold">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-600 max-w-lg mx-auto text-lg">
+          <p className="text-gray-600 max-w-lg mx-auto sm:text-lg">
             Answered all frequently asked questions, Still confused? feel free
             to contact us.
           </p>
         </div>
 
-        <div className="sm:flex sm:p-14 px-5 mt-10   sm:justify-between ">
+        <div className="sm:flex sm:p-14 px-5 mt-4  sm:justify-between ">
           <div className=" max-w-2xl mx-auto sm:w-2/5">
             {faqsList.map((item, idx) => (
               <FaqsCard idx={idx} faqsList={item} />
             ))}
           </div>
-          <div className="  sm:w-2/5	border-[#cfcfcf] border-2	 bg-white rounded-2xl flex-col flex items-center mt-5 sm:mt-0 py-3 sm:py-10 mb-5 sm:mb-0 ">
+          <div className="  sm:w-2/5 max-h-96	border-[#cfcfcf] border-2	 bg-white rounded-2xl flex-col flex items-center mt-5 sm:mt-0 py-3 sm:py-10 mb-5 sm:mb-0 ">
             <ChatBubbleIcon className="text-[#2f4858] h-16 w-16 " />
             <p className="text-[#2f4858] font-bold	sm:text-2xl text-xl sm:mt-5  	">
               Do you have more questions?
