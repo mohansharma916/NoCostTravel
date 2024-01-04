@@ -1,27 +1,27 @@
 "use client";
 const FooterComponent = () => {
   const footerNavs = [
-    {
-      label: "Resources",
-      items: [
-        {
-          href: "javascript:void()",
-          name: "contact",
-        },
-        {
-          href: "javascript:void()",
-          name: "Support",
-        },
-        {
-          href: "javascript:void()",
-          name: "Documentation",
-        },
-        {
-          href: "javascript:void()",
-          name: "Pricing",
-        },
-      ],
-    },
+    // {
+    //   label: "Resources",
+    //   items: [
+    //     {
+    //       href: "javascript:void()",
+    //       name: "contact",
+    //     },
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Support",
+    //     },
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Documentation",
+    //     },
+    //     {
+    //       href: "javascript:void()",
+    //       name: "Pricing",
+    //     },
+    //   ],
+    // },
     {
       label: "About",
       items: [
@@ -115,7 +115,7 @@ const FooterComponent = () => {
             </form>
           </div>
         </div>
-        <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
+        <div className="flex-1 mt-16  justify-between flex sm:space-y-0">
           {footerNavs.map((item, idx) => (
             <ul className="space-y-4 text-gray-300" key={idx}>
               <h4 className="text-gray-200 font-semibold sm:pb-1">
